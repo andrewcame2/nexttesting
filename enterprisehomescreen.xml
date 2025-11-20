@@ -1,130 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ehs-configuration>
+<config>
 
-    <!-- GENERAL SETTINGS -->
-    <general>
-        <defaultlauncher>true</defaultlauncher>
-        <adminpassword>694130</adminpassword>
+    <!--
+      KIOSK SECTION
+      We’re NOT using single-app Kiosk Mode here, just multi-app home.
+      Leave kiosk empty and kiosk_mode_enabled=0 in preferences.
+    -->
+    <kiosk>
+        <!-- Intentionally left empty for multi-app launcher -->
+    </kiosk>
 
-        <shortcutsenabled>true</shortcutsenabled>
-        <databuttonsallowed>false</databuttonsallowed>
+    <!--
+      APPLICATIONS SECTION
+      These are the tiles/icons users see on the EHS home screen.
+    -->
+    <applications>
 
-        <disablehomekey>true</disablehomekey>
-        <disablebackkey>true</disablebackkey>
-        <disablerecentappskey>true</disablerecentappskey>
+        <!-- xSolo (MAUI app) -->
+        <application
+            label="xSolo"
+            package="com.marken.solomobileapp"
+            activity="crc64600d9de7c1b27191.MainActivity" />
 
-        <disablestatusbar>true</disablestatusbar>
-        <disablequicksettings>true</disablequicksettings>
-        <disablelargenotifications>true</disablelargenotifications>
+        <!-- DataWedge (DWDemo UI) -->
+        <application
+            label="DataWedge"
+            package="com.symbol.datawedge" />
 
-        <keepappsinforeground>false</keepappsinforeground>
-    </general>
+        <!-- Zebra Bluetooth app -->
+        <application
+            label="Bluetooth"
+            package="com.zebra.bluetooth" />
 
-    <!-- DEVICE INFO BANNER -->
-    <devicedetails>
-        <showdetailsbanner>true</showdetailsbanner>
-        <showdeviceserial>true</showdeviceserial>
-        <showbattery>true</showbattery>
-        <showwifissid>true</showwifissid>
-        <showdeviceowner>false</showdeviceowner>
-    </devicedetails>
+        <!-- Android Settings (for troubleshooting/admin) -->
+        <application
+            label="Settings"
+            package="com.android.settings" />
 
-    <!-- NO AUTO-LAUNCH IN MULTI-APP MODE -->
-    <auto-launch>
-    </auto-launch>
+    </applications>
 
-    <!-- ALLOWED APPS (WHITELIST MODE) -->
-    <apps>
+    <!--
+      TOOLS SECTION
+      Apps available under the Tools menu in Admin/User modes.
+      You can trim this down later if needed.
+    -->
+    <tools>
 
-        <!-- xSolo (REAL PACKAGE + ACTIVITY) -->
-        <allowed-app>
-            <package-name>com.marken.solomobileapp</package-name>
-        </allowed-app>
+        <!-- Keep DataWedge available from Tools -->
+        <application
+            label="DataWedge"
+            package="com.symbol.datawedge" />
 
-        <!-- DataWedge -->
-        <allowed-app>
-            <package-name>com.symbol.datawedge</package-name>
-        </allowed-app>
+        <!-- Settings in Tools as well -->
+        <application
+            label="Settings"
+            package="com.android.settings" />
 
-        <!-- Zebra Bluetooth -->
-        <allowed-app>
-            <package-name>com.zebra.bluetooth</package-name>
-        </allowed-app>
+        <!-- Optional: Bluetooth from Tools -->
+        <application
+            label="Bluetooth"
+            package="com.zebra.bluetooth" />
 
-        <!-- Settings (admin only from menu) -->
-        <allowed-app>
-            <package-name>com.android.settings</package-name>
-        </allowed-app>
+    </tools>
 
-        <!-- EHS Shell (correct modern package) -->
-        <allowed-app>
-            <package-name>com.symbol.enterprisehomescreen</package-name>
-        </allowed-app>
+    <!--
+      PASSWORDS SECTION
+      DO NOT manually populate. EHS will write an encrypted value here
+      after you set the Admin password from the UI.
+    -->
+    <passwords>
+        <admin></admin>
+    </passwords>
 
-    </apps>
+    <!--
+      PREFERENCES SECTION
+      Based on the latest EHS Advanced Settings docs.
+      Controls title, restrictions, etc.
+    -->
+    <preferences>
 
-    <!-- HOME SCREEN SHORTCUT GRID -->
-    <shortcuts>
+        <!-- Show serial number in the title bar -->
+        <title>
+            <value>xSolo-AOSP #[serial_number]</value>
+        </title>
 
-        <!-- xSolo Tile -->
-        <shortcut>
-            <label>xSolo</label>
-            <package-name>com.marken.solomobileapp</package-name>
-            <activity-name>crc64600d9de7c1b27191.MainActivity</activity-name>
-        </shortcut>
+        <!-- Icon label colours (defaults) -->
+        <icon_label_background_color>#00FFFFFF</icon_label_background_color>
+        <icon_label_text_color>#FFFFFFFF</icon_label_text_color>
 
-        <!-- DataWedge Tile -->
-        <shortcut>
-            <label>DataWedge</label>
-            <package-name>com.symbol.datawedge</package-name>
-            <activity-name>com.symbol.datawedge.MainActivity</activity-name>
-        </shortcut>
+        <!-- Orientation: blank = allow rotation / system default -->
+        <orientation></orientation>
 
-        <!-- Zebra Bluetooth Tile -->
-        <shortcut>
-            <label>Bluetooth</label>
-            <package-name>com.zebra.bluetooth</package-name>
-            <activity-name>com.zebra.bluetooth.BluetoothActivity</activity-name>
-        </shortcut>
+        <!-- No auto-launch single-app kiosk -->
+        <auto_launch_enable>0</auto_launch_enable>
+        <service_auto_launch_enable>0</service_auto_launch_enable>
 
-        <!-- Settings Tile -->
-        <shortcut>
-            <label>Settings</label>
-            <package-name>com.android.settings</package-name>
-            <activity-name>com.android.settings.Settings</activity-name>
-        </shortcut>
+        <!-- No custom wallpaper yet (you can add later) -->
+        <wallpaper></wallpaper>
 
-    </shortcuts>
+        <!--
+          Kiosk Mode flag (single app). 0 = OFF.
+          We are using multi-app “kiosk style” instead, via the Applications list.
+        -->
+        <kiosk_mode_enabled>0</kiosk_mode_enabled>
 
-    <!-- UI SETTINGS -->
-    <ui>
-        <showclock>false</showclock>
-        <showbattery>false</showbattery>
-        <showwifi>false</showwifi>
-        <showcellular>false</showcellular>
-        <showbluetooth>false</showbluetooth>
+        <!-- Lock down quick stuff on keyguard -->
+        <keyguard_camera_disabled>1</keyguard_camera_disabled>
+        <keyguard_search_disabled>1</keyguard_search_disabled>
 
-        <showrecentsbutton>false</showrecentsbutton>
-        <showbackbutton>false</showbackbutton>
-        <showhomebutton>false</showhomebutton>
-    </ui>
+        <!-- Security-related restrictions -->
+        <usb_debugging_disabled>1</usb_debugging_disabled>
+        <system_settings_restricted>1</system_settings_restricted>
 
-    <!-- DEVICE RESTRICTIONS -->
-    <restrictions>
-        <cameradisable>false</cameradisable>
-        <usermodifiablevolume>false</usermodifiablevolume>
-        <airplaneModedisabled>true</airplaneModedisabled>
-        <nfcdisabled>false</nfcdisabled>
-        <screencapturedisabled>true</screencapturedisabled>
-    </restrictions>
+        <!-- Recent apps button & view disabled -->
+        <recent_apps_button_disabled>1</recent_apps_button_disabled>
+        <recent_apps_access_disabled>1</recent_apps_access_disabled>
 
-    <!-- ADMIN MENU -->
-    <admin-menu>
-        <enableadminmenu>true</enableadminmenu>
-        <showdiagnostics>true</showdiagnostics>
-        <showwifisettings>true</showwifisettings>
-        <showsystemsettings>true</showsystemsettings>
-        <showapps>true</showapps>
-    </admin-menu>
+        <!-- Wi-Fi info on title bar (leave hidden for now) -->
+        <wireless_info>
+            <show_ip_address>0</show_ip_address>
+            <show_mac_address>0</show_mac_address>
+            <show_bssid>0</show_bssid>
+            <show_ssid>0</show_ssid>
+            <show_scan_result>0</show_scan_result>
+        </wireless_info>
 
-</ehs-configuration>
+        <!-- Screen blanking feature (independent of Android timeout) -->
+        <screen_blanking>
+            <blanking_enabled>0</blanking_enabled>
+            <speed_threshold>10</speed_threshold>
+            <blanking_mode>1</blanking_mode>
+        </screen_blanking>
+
+        <!-- Optional: user_options for icon size, etc. -->
+    </preferences>
+
+</config>

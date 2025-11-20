@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ehs-configuration>
+
+    <!-- GENERAL SETTINGS -->
+    <general>
+        <defaultlauncher>true</defaultlauncher>
+        <adminpassword>694130</adminpassword>
+
+        <shortcutsenabled>true</shortcutsenabled>
+        <databuttonsallowed>false</databuttonsallowed>
+
+        <disablehomekey>true</disablehomekey>
+        <disablebackkey>true</disablebackkey>
+        <disablerecentappskey>true</disablerecentappskey>
+
+        <disablestatusbar>true</disablestatusbar>
+        <disablequicksettings>true</disablequicksettings>
+        <disablelargenotifications>true</disablelargenotifications>
+
+        <keepappsinforeground>false</keepappsinforeground>
+    </general>
+
+    <!-- DEVICE INFO BANNER -->
+    <devicedetails>
+        <showdetailsbanner>true</showdetailsbanner>
+        <showdeviceserial>true</showdeviceserial>
+        <showbattery>true</showbattery>
+        <showwifissid>true</showwifissid>
+        <showdeviceowner>false</showdeviceowner>
+    </devicedetails>
+
+    <!-- NO AUTO-LAUNCH IN MULTI-APP MODE -->
+    <auto-launch>
+    </auto-launch>
+
+    <!-- ALLOWED APPS (WHITELIST MODE) -->
+    <apps>
+
+        <!-- xSolo (REAL PACKAGE + ACTIVITY) -->
+        <allowed-app>
+            <package-name>com.marken.solomobileapp</package-name>
+        </allowed-app>
+
+        <!-- DataWedge -->
+        <allowed-app>
+            <package-name>com.symbol.datawedge</package-name>
+        </allowed-app>
+
+        <!-- Zebra Bluetooth -->
+        <allowed-app>
+            <package-name>com.zebra.bluetooth</package-name>
+        </allowed-app>
+
+        <!-- Settings (admin only from menu) -->
+        <allowed-app>
+            <package-name>com.android.settings</package-name>
+        </allowed-app>
+
+        <!-- EHS Shell (correct modern package) -->
+        <allowed-app>
+            <package-name>com.symbol.enterprisehomescreen</package-name>
+        </allowed-app>
+
+    </apps>
+
+    <!-- HOME SCREEN SHORTCUT GRID -->
+    <shortcuts>
+
+        <!-- xSolo Tile -->
+        <shortcut>
+            <label>xSolo</label>
+            <package-name>com.marken.solomobileapp</package-name>
+            <activity-name>crc64600d9de7c1b27191.MainActivity</activity-name>
+        </shortcut>
+
+        <!-- DataWedge Tile -->
+        <shortcut>
+            <label>DataWedge</label>
+            <package-name>com.symbol.datawedge</package-name>
+            <activity-name>com.symbol.datawedge.MainActivity</activity-name>
+        </shortcut>
+
+        <!-- Zebra Bluetooth Tile -->
+        <shortcut>
+            <label>Bluetooth</label>
+            <package-name>com.zebra.bluetooth</package-name>
+            <activity-name>com.zebra.bluetooth.BluetoothActivity</activity-name>
+        </shortcut>
+
+        <!-- Settings Tile -->
+        <shortcut>
+            <label>Settings</label>
+            <package-name>com.android.settings</package-name>
+            <activity-name>com.android.settings.Settings</activity-name>
+        </shortcut>
+
+    </shortcuts>
+
+    <!-- UI SETTINGS -->
+    <ui>
+        <showclock>false</showclock>
+        <showbattery>false</showbattery>
+        <showwifi>false</showwifi>
+        <showcellular>false</showcellular>
+        <showbluetooth>false</showbluetooth>
+
+        <showrecentsbutton>false</showrecentsbutton>
+        <showbackbutton>false</showbackbutton>
+        <showhomebutton>false</showhomebutton>
+    </ui>
+
+    <!-- DEVICE RESTRICTIONS -->
+    <restrictions>
+        <cameradisable>false</cameradisable>
+        <usermodifiablevolume>false</usermodifiablevolume>
+        <airplaneModedisabled>true</airplaneModedisabled>
+        <nfcdisabled>false</nfcdisabled>
+        <screencapturedisabled>true</screencapturedisabled>
+    </restrictions>
+
+    <!-- ADMIN MENU -->
+    <admin-menu>
+        <enableadminmenu>true</enableadminmenu>
+        <showdiagnostics>true</showdiagnostics>
+        <showwifisettings>true</showwifisettings>
+        <showsystemsettings>true</showsystemsettings>
+        <showapps>true</showapps>
+    </admin-menu>
+
+</ehs-configuration>

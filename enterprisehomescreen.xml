@@ -30,7 +30,7 @@
         <!-- Zebra Bluetooth app -->
         <application
             label="Bluetooth"
-            package="com.zebra.bluetooth" />
+            package="com.zebra.bluetoothpairing" />
 
         <!-- Android Settings (for troubleshooting/admin) -->
         <application
@@ -59,7 +59,7 @@
         <!-- Optional: Bluetooth from Tools -->
         <application
             label="Bluetooth"
-            package="com.zebra.bluetooth" />
+            package="com.zebra.bluetoothpairing" />
 
     </tools>
 
@@ -81,7 +81,7 @@
 
         <!-- Show serial number in the title bar -->
         <title>
-            <value>xSolo-AOSP #[serial_number]</value>
+            <value>xSolo-[serial_number]</value>
         </title>
 
         <!-- Icon label colours (defaults) -->
@@ -136,3 +136,4 @@
     </preferences>
 
 </config>
+

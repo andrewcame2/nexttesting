@@ -21,8 +21,6 @@
         <!-- DataWedge (DWDemo UI) -->
         <application label="DataWedge" package="com.symbol.datawedge"/>
 
-        <!-- Android Settings (for troubleshooting/admin) -->
-        <application label="Settings" package="com.android.settings"/>
 
     </applications>
 
@@ -114,4 +112,5 @@
     </preferences>
 
 </config>
+
 

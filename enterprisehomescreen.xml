@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<config>
+<?xml version="1.0" encoding="UTF-8"?><config>
 
     <!--
       KIOSK SECTION
@@ -17,25 +16,16 @@
     <applications>
 
         <!-- xSolo (MAUI app) -->
-        <application
-            label="xSolo"
-            package="com.marken.solomobileapp"
-            activity="crc64600d9de7c1b27191.MainActivity" />
+        <application label="xSolo" package="com.marken.solomobileapp" activity="crc64600d9de7c1b27191.MainActivity"/>
 
         <!-- DataWedge (DWDemo UI) -->
-        <application
-            label="DataWedge"
-            package="com.symbol.datawedge" />
+        <application label="DataWedge" package="com.symbol.datawedge"/>
 
         <!-- Zebra Bluetooth app -->
-        <application
-            label="Bluetooth"
-            package="com.zebra.bluetoothpairing" />
+        <application label="Bluetooth" package="com.zebra.bluetoothpairing"/>
 
         <!-- Android Settings (for troubleshooting/admin) -->
-        <application
-            label="Settings"
-            package="com.android.settings" />
+        <application label="Settings" package="com.android.settings"/>
 
     </applications>
 
@@ -47,19 +37,13 @@
     <tools>
 
         <!-- Keep DataWedge available from Tools -->
-        <application
-            label="DataWedge"
-            package="com.symbol.datawedge" />
+        <application label="DataWedge" package="com.symbol.datawedge"/>
 
         <!-- Settings in Tools as well -->
-        <application
-            label="Settings"
-            package="com.android.settings" />
+        <application label="Settings" package="com.android.settings"/>
 
         <!-- Optional: Bluetooth from Tools -->
-        <application
-            label="Bluetooth"
-            package="com.zebra.bluetoothpairing" />
+        <application label="Bluetooth" package="com.zebra.bluetoothpairing"/>
 
     </tools>
 
@@ -69,7 +53,7 @@
       after you set the Admin password from the UI.
     -->
     <passwords>
-        <admin></admin>
+		<admin attempts="1">TrW9MMgTjG5Yxg5Ur9Cb2fd43WFBHWAfYs3BvhgIPaA=5FEwFdcrxVR8pbVLms8olzug/5hlQ0k5qZGvNF94Bpc=</admin>
     </passwords>
 
     <!--
@@ -89,14 +73,14 @@
         <icon_label_text_color>#FFFFFFFF</icon_label_text_color>
 
         <!-- Orientation: blank = allow rotation / system default -->
-        <orientation></orientation>
+        <orientation/>
 
         <!-- No auto-launch single-app kiosk -->
         <auto_launch_enable>0</auto_launch_enable>
         <service_auto_launch_enable>0</service_auto_launch_enable>
 
         <!-- No custom wallpaper yet (you can add later) -->
-        <wallpaper></wallpaper>
+        <wallpaper/>
 
         <!--
           Kiosk Mode flag (single app). 0 = OFF.
@@ -110,7 +94,7 @@
 
         <!-- Security-related restrictions -->
         <usb_debugging_disabled>1</usb_debugging_disabled>
-        <system_settings_restricted>1</system_settings_restricted>
+        <system_settings_restricted>0</system_settings_restricted>
 
         <!-- Recent apps button & view disabled -->
         <recent_apps_button_disabled>1</recent_apps_button_disabled>
@@ -136,4 +120,3 @@
     </preferences>
 
 </config>
-

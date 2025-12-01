@@ -21,9 +21,6 @@
         <!-- DataWedge (DWDemo UI) -->
         <application label="DataWedge" package="com.symbol.datawedge"/>
 
-        <!-- Zebra Bluetooth app -->
-        <application label="Bluetooth" package="com.zebra.bluetoothpairing"/>
-
         <!-- Android Settings (for troubleshooting/admin) -->
         <application label="Settings" package="com.android.settings"/>
 
@@ -41,9 +38,6 @@
 
         <!-- Settings in Tools as well -->
         <application label="Settings" package="com.android.settings"/>
-
-        <!-- Optional: Bluetooth from Tools -->
-        <application label="Bluetooth" package="com.zebra.bluetoothpairing"/>
 
     </tools>
 
@@ -65,7 +59,7 @@
 
         <!-- Show serial number in the title bar -->
         <title>
-            <value>xSolo-[serial_number]</value>
+            <value>[serial_number]</value>
         </title>
 
         <!-- Icon label colours (defaults) -->
@@ -97,8 +91,8 @@
         <system_settings_restricted>0</system_settings_restricted>
 
         <!-- Recent apps button & view disabled -->
-        <recent_apps_button_disabled>1</recent_apps_button_disabled>
-        <recent_apps_access_disabled>1</recent_apps_access_disabled>
+        <recent_apps_button_disabled>0</recent_apps_button_disabled>
+        <recent_apps_access_disabled>0</recent_apps_access_disabled>
 
         <!-- Wi-Fi info on title bar (leave hidden for now) -->
         <wireless_info>
@@ -120,3 +114,4 @@
     </preferences>
 
 </config>
+

@@ -21,7 +21,6 @@
         <!-- DataWedge (DWDemo UI) -->
         <application label="DataWedge" package="com.symbol.datawedge"/>
 
-
     </applications>
 
     <!--
@@ -36,6 +35,9 @@
 
         <!-- Settings in Tools as well -->
         <application label="Settings" package="com.android.settings"/>
+
+        <!-- Optional: Bluetooth from Tools -->
+        <application label="Bluetooth" package="com.zebra.bluetoothpairing"/>
 
     </tools>
 
@@ -57,7 +59,7 @@
 
         <!-- Show serial number in the title bar -->
         <title>
-            <value>[serial_number]</value>
+            <value>xSolo-[serial_number]</value>
         </title>
 
         <!-- Icon label colours (defaults) -->
@@ -109,8 +111,9 @@
         </screen_blanking>
 
         <!-- Optional: user_options for icon size, etc. -->
+		<apps_enabled>
+			<application package="com.android.settings"/>
+		</apps_enabled>
     </preferences>
 
 </config>
-
-
